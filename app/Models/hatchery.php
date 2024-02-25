@@ -14,5 +14,13 @@ class hatchery extends Model
         'city',
         'departament',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+    public function shed()
+    {
+        return $this->hasMany(shed::class);
+    }
 }
 

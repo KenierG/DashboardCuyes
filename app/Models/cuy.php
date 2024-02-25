@@ -15,4 +15,12 @@ class cuy extends Model
         'size_heigth',
         'weigth',
     ];
+    public function cuy()
+    {
+        return $this->belongsTo(shed::class, 'sheds_id');
+    }
+    public function dataCuy()
+    {
+        return $this->hasMany(dataCuy::class);
+    }
 }

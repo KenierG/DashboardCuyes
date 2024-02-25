@@ -16,8 +16,8 @@ return new class extends Migration {
             $table->double('size_width');
             $table->double('size_heigth');
             $table->double('weigth');
-            //$table->foreignId('cuys_id')->constrained()->cascadeOnDelete();
-            //$table->foreignId('state_healts_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('cuys_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('state_healts_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

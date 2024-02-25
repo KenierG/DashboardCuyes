@@ -7,59 +7,61 @@ use Illuminate\Http\Request;
 
 class CuyController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
+
+    // Para visualizar todos los datos
     public function index()
     {
-        //
+        //return view('ruta', [
+        //    'cuyes' => cuy::all()
+        //]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    //Para ir a la vista de crear cuyes
     public function create()
     {
-        //
+        // return view('ruta.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    //Para guardar en la bbdd el cuy
     public function store(Request $request)
     {
-        //
-    }
+        //$request->validate([
+        //    'name' => 'required|string|max:255',
+        //    'age' => 'required|string|max:255',
+        //    'size_width' => 'required|string|max:255',
+        //    'size_heigth' => 'required|string|max:255',
+        //    'weigth' => 'required|string|max:255',
+        //    'sheds_id' => 'required|string|max:255',
+        //    // Añadir más validaciones según tus necesidades
+        //]);
 
-    /**
-     * Display the specified resource.
-     */
+        //Cuy::create($request->all());
+
+        //return redirect()->route('ruta.index')->with('success', 'Cuy creado exitosamente');
+
+    }
+    //Para ir a la vista de un cuy
     public function show(cuy $cuy)
     {
-        //
+        //return view('ruta.show', compact('cuy'));
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
+    //Para ir a la vista de editar cuy
     public function edit(cuy $cuy)
     {
-        //
+        //return view('ruta.edit', compact('cuy'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    //Para actualizar cuy
     public function update(Request $request, cuy $cuy)
     {
         //
     }
-
-    /**
-     * Remove the specified resource from storage.
-     */
+    //Para eliminar cuy
     public function destroy(cuy $cuy)
     {
-        //
+        //     $cuy->delete();
+        //     return redirect()->route('ruta.index')->with('success', 'Cuy eliminado exitosamente');
+
     }
 }

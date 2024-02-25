@@ -21,6 +21,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'enterpise',
+        'phone',
+        'password',
     ];
 
     /**
@@ -42,4 +45,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function hatchery()
+    {
+        return $this->hasMany(Hatchery::class);
+    }
 }

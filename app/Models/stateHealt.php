@@ -11,4 +11,9 @@ class stateHealt extends Model
     protected $fillable = [
         'name',
     ];
+
+    public function stateHealt()
+    {
+        return $this->hasMany(stateHealt::class);
+    }
 }
